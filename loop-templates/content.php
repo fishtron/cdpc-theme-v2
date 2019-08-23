@@ -14,8 +14,60 @@ if ( get_field('publication_download') ) {
 
 ?>
 
+
+<?php if ( 'people' == get_post_type() ) : ?>
+
 <article <?php post_class('card'); ?> id="post-<?php the_ID(); ?>">
-	<a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'card-image-top']) ?></a>
+
+	<div class="row">
+		<div class="col-4 no-gutters">
+			<a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img']) ?></a>
+		</div>
+		
+		<div class="col-8 card-body">
+			<header class="entry-header mb-2">
+
+				<?php
+				the_title(
+					sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					'</a></h2>'
+				);
+				?>
+
+			</header><!-- .entry-header -->
+
+			<div class="entry-content card-text">
+
+				<p>
+					<?php the_field('supporter_association'); ?><br />
+					<span class="text-muted"><?php the_field('supporter_position'); ?></span>
+				</p>
+
+				<?php
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+						'after'  => '</div>',
+					)
+				);
+				?>
+
+			</div><!-- .entry-content -->
+
+			<footer class="entry-footer">
+
+			</footer><!-- .entry-footer -->
+		</div>
+	</div>
+
+</article><!-- #post-## -->
+
+<?php else : ?>
+
+<article <?php post_class('card'); ?> id="post-<?php the_ID(); ?>">
+	
+	<a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top']) ?></a>
+
 	<div class="card-body">
 		<header class="entry-header mb-2">
 
@@ -52,9 +104,17 @@ if ( get_field('publication_download') ) {
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
+
 			<a href="<?= esc_url ( get_permalink() ); ?>" class="card-link btn btn-sm btn-dark">Read more</a>
-			<?php if ( $download ) : $download = (object) $download; ?><a href="<?= $download->url ?>" class="card-link btn btn-sm btn-success">Download</a><?php endif; ?>
+			
+			<?php if ( !empty($download) ) : $download = (object) $download; ?>
+			
+				<a href="<?= $download->url ?>" class="card-link btn btn-sm btn-success">Download</a>
+
+			<?php endif; ?>
+
 		</footer><!-- .entry-footer -->
 	</div>
 
 </article><!-- #post-## -->
+<?php endif; ?>

@@ -14,7 +14,7 @@ h3, h4, h5, h6 {
   font-weight: $font-weight-bold;
 }
 
-// reset font size because of current font selection
+// reset font size because of current font selection; can be tweaked if fonts change
 h3 {
   font-size: 1.5rem;
 }
@@ -165,7 +165,7 @@ figcaption {
 
 /* Beaver Builder Overrides */
 
-// reset margins on non BB pages so header and content line up
+// zero gutters on non BB pages so header and content line up
 body:not(.fl-builder) {
   .row {
     margin-left: 0;
@@ -222,6 +222,7 @@ body:not(.fl-builder) {
   }
 }
 
+// zero outside gutters
 .fl-row-content-wrap {
   padding: 20px 0;
 
@@ -458,9 +459,6 @@ body:not(.fl-builder) {
     font-size: $font-size-sm;
   }
 }
-
-
-/* Blog post customisations */
 
 .single-post, .single-publications {
   .entry-header {

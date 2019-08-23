@@ -1,0 +1,29 @@
+/*
+Theme Name: CDPC Theme v2
+Author: Lois Chan-Pedley, Front Matter Consulting
+Author URI: http://www.frontmatter.ca
+GitHub Theme URI: 
+Description: CDPC Theme version 2, lovingly handcrafted using understrap, a framework/starter theme that combines underscores, Bootstrap 4, and SASS. Styles based on v0.1 of CDPC Theme.
+Version: 2.0.0
+License: UnderStrap WordPress Theme, Copyright 2019 Canadian Drug Policy Coalition
+
+Text Domain: cdpc-theme-v2
+Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+
+Resource Licenses:
+UnderStrap: https://understrap.com/ | https://github.com/understrap/understrap#license (GNU GPL v2)
+Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+and of course
+jQuery: https://jquery.org | (Code licensed under MIT)
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+*/
+
+/*
+This file is just used to identify the theme in WordPress.
+The compiled CSS output can be found in /css/theme.css
+The SASS sources for it can be found in /sass/
+The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
+
+...and now go out and play!
+*/

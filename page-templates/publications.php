@@ -13,7 +13,6 @@ get_header();
 $args = array(
 	'post_type' => 'publications',
 	'post_status' => 'publish',
-	'posts_per_page' => $pageCount,
 	'paged' => $paged
 );
 $wp_query = new WP_Query($args);

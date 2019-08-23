@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<?php understrap_post_nav(); ?>
+					<?php if ( 'post' == get_post_type() ) { understrap_post_nav(); } ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -44,15 +44,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<footer>
+				<?php if ( 'post' == get_post_type() ) : ?>
+
 				<div class="bio">
 					<figure class="author">
-						<?php echo get_avatar(get_the_author_meta('id'), '100', '', '', array ('class' => 'rounded-circle') ); ?>
+						<?php echo get_avatar( get_the_author_meta('email'), '100', '', '', array ('class' => 'rounded-circle') ); ?>
 					</figure>
 					<span>
 					<h3>About <?php the_author(); ?></h3>
-					<p><?php the_author_description(); ?></p>
+					<p><?php the_author_meta('description'); ?></p>
 					</span>
 				</div>
+
+				<?php endif; ?>
+
 			</footer>
 
 			<!-- Do the right sidebar check -->

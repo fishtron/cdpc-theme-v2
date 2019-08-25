@@ -33,8 +33,8 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 						<?php the_post_thumbnail( 'post-thumbnail', ['class' => 'card-img'] ) ?>
 					</div>
 					<div class="col-8 card-body">
+					<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 					<p class="lead">
-						<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 						<?php the_field('supporter_association'); ?><br />
 						<span class="text-muted"><?php the_field('supporter_position'); ?></span>
 					</p>

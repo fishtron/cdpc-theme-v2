@@ -347,3 +347,7 @@ function cdpc_search_form( $html ) {
   return $html;
 }
 add_filter( 'get_search_form', 'cdpc_search_form' );
+
+add_filter( 'excerpt_length', function($length) {
+    return 27;
+} );

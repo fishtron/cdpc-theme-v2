@@ -52,7 +52,7 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 	</header><!-- .entry-header -->
 
 	<div class="row">
-		<div class="entry-content <?php if ($has_sidebar) : ?>col-md-9<?php endif; ?>">
+		<div class="entry-content <?php if ($has_sidebar) : ?>col-md-9<?php else : ?>col<?php endif; ?>">
 
 			<?php the_content(); ?>
 

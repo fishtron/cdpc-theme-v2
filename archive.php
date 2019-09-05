@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<?php if ( single_cat_title('', false) != 'All' ) : /* hide the category heading if it's 'All' */?>
+		<?php if ( single_cat_title('', false) != 'All' && single_cat_title('', false) != 'Non classifié(e)' ) : /* hide the category heading if it's 'All' */?>
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );

@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="mt-auto" id="nav-stuff">
 
 					<div class="utility bg-primary row justify-content-end">
-					  <div class="inline-form header-search col-md-6">
+					  <div class="header-search col-md-6">
 							<?php get_search_form(); ?>
 				    </div>
 
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 				  </div>
 
-			    <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-0">
+			    <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-0 row">
 
 						<?php if ( 'container' == $container ) : ?>
 						<div class="container pr-0">

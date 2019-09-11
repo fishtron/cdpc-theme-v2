@@ -560,6 +560,34 @@ body:not(.fl-builder) {
 }
 
 
+/* Homepage customisations */
+
+.home {
+  .fl-module-post-slider {
+    .bx-wrapper {
+      margin-bottom: 0;
+      .fl-post-slider-content * {
+        max-width: 1060px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        // I'm so sorry
+      }
+      .bx-controls {
+        bottom: 3rem;
+        margin-top: 0;
+        .bx-pager-item {
+          .bx-pager-link {
+            background: $gray-500;
+            &.active {
+              background: $gray-100;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* Blog/Archive page customisations */
 

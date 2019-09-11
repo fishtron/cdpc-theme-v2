@@ -544,8 +544,21 @@ body:not(.fl-builder) {
         color: $primary;
       }
     }
+    #footer-text-sfu-en, #footer-text-sfu-fr {
+      // hardcoding the width because widget count returns
+      // both en and fr versions of the same widget as active
+      // and messes up the dynamic grid
+      @include make-col(12);
+      @include media-breakpoint-between(sm,lg) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(8);
+      }
+    }
   }
 }
+
 
 
 /* Blog/Archive page customisations */

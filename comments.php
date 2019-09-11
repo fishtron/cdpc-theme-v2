@@ -11,6 +11,12 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+/* 
+ * Disabling comments site-wide by returning early without 
+ * doing anything at all
+ */
+return;
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will

@@ -52,7 +52,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 
 		/*
 		 * When the corresponding filter is evaluated on the front end
-		 * this takes into account that there might have been made other changes.
+		 * this takes into account that there might have been other changes.
 		 */
 		$sidebars_widgets_count = apply_filters( 'sidebars_widgets', $sidebars_widgets );
 
@@ -66,7 +66,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 				// Four widgets per row if there are exactly four or more than six.
 				$widget_classes .= ' col-md-3';
 			} elseif ( 6 === $widget_count ) {
-				// If two widgets are published.
+				// If six widgets are published.
 				$widget_classes .= ' col-md-2';
 			} elseif ( $widget_count >= 3 ) {
 				// Three widgets per row if there's three or more widgets.
@@ -75,7 +75,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 				// If two widgets are published.
 				$widget_classes .= ' col-md-6';
 			} elseif ( 1 === $widget_count ) {
-				// If just on widget is active.
+				// If just one widget is published.
 				$widget_classes .= ' col-md-12';
 			}
 

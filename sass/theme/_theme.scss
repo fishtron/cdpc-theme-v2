@@ -533,7 +533,7 @@ body:not(.fl-builder) {
 /* Blog/Archive page customisations */
 
 .blog, .archive, .publications {
-  .card.has-post-thumbnail {
+  .card.has-post-thumbnail .wrapper-thumb {
     position: relative;
     overflow: hidden;
     img {

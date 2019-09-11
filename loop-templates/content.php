@@ -66,7 +66,7 @@ if ( get_field('publication_download') ) {
 
 <article <?php post_class('card'); ?> id="post-<?php the_ID(); ?>">
 	
-	<a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top']) ?></a>
+	<div class="wrapper-thumb"><a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top']) ?></a></div>
 
 	<div class="card-body">
 		<header class="entry-header mb-2">

@@ -9,6 +9,10 @@ h1, h2 {
   font-weight: $font-weight-bold;
 }
 
+h1:not(.entry-title), h2:not(.entry-title) {
+  margin-top: 2.5rem;
+}
+
 h3, h4, h5, h6 {
   font-family: $font-family-san-serif;
   font-weight: $font-weight-bold;
@@ -29,11 +33,6 @@ a:hover {
 blockquote, .blockquote {
   font-family: $font-family-serif;
   letter-spacing: $tight-letter-spacing;
-  p {
-    font-size: $font-size-base * 2;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-base * 0.6;
-  }
   cite {
     position: relative;
     font-size: $small-font-size;
@@ -80,15 +79,8 @@ figcaption {
           padding: 5px;
         }
       }
-    }
-  }
-  &.navbar-dark {
-    .navbar-nav {
-      .nav-link {
-        color: rgba(255,255,255,0.75);
-        &:hover {
-          color: rgba(255,255,255,1);
-        }
+      &:hover>.dropdown-menu {
+        display: block;
       }
     }
   }
@@ -128,12 +120,13 @@ figcaption {
 .side-quote {
   color: $primary;
   font-size: $font-size-lg;
+  font-weight: 700;
   margin-top: 100px;
 }
 
 .lead {
   font-size: $font-size-base * 1.25;
-  letter-spacing: $tight-letter-spacing;
+  letter-spacing: $tighter-letter-spacing;
 }
 
 .btn {
@@ -154,6 +147,8 @@ figcaption {
         margin-left: auto;
         margin-right: auto;
         @include make-container-max-widths();
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
   } 
@@ -197,6 +192,16 @@ figcaption {
     strong {
       color: $secondary;
       width: 100%;
+    }
+  }
+}
+
+.fl-module-content {
+  blockquote, .blockquote {
+    p {
+      font-size: $font-size-base * 2;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-base * 0.8;
     }
   }
 }
@@ -511,11 +516,20 @@ figcaption {
   .fl-module-post-slider {
     .bx-wrapper {
       margin-bottom: 0;
-      .fl-post-slider-content * {
-        max-width: 1060px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        // I'm so sorry
+      .fl-post-slider-content {
+        * {
+          max-width: 1060px;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          // I'm so sorry
+        }
+        .fl-post-slider-feed-meta {
+          font-size: $small-font-size;
+        }
+        .fl-post-slider-feed-content {
+          letter-spacing: $tighter-letter-spacing;
+          font-size: $font-size-base * 1.25;
+        }
       }
       .bx-controls {
         bottom: 3rem;

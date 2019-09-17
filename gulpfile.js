@@ -15,6 +15,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
+var bless = require('gulp-bless');
 var gulpSequence = require('gulp-sequence');
 var replace = require('gulp-replace');
 var autoprefixer = require('autoprefixer');
@@ -85,9 +86,16 @@ gulp.task(
 	})
 );
 
-// Run:
-// gulp cssnano
-// Minifies CSS files
+gulp.task('bless', function() {
+	return gulp
+		.src(paths.css + '/theme.css')
+    .pipe(bless({ 
+    	imports    : true,
+    	cacheBuster: false
+    }))
+    .pipe(gulp.dest(paths.css));
+});
+
 gulp.task('cssnano', function() {
 	return gulp
 		.src(paths.css + '/theme.css')
@@ -106,9 +114,13 @@ gulp.task('cssnano', function() {
 		.pipe(gulp.dest(paths.css));
 });
 
+// Run:
+// gulp minifycss
+// Minifies CSS files
+
 gulp.task('minifycss', function() {
 	return gulp
-		.src(`${paths.css}/theme.css`)
+		.src( [`${paths.css}/theme.css`, `${paths.css}/theme-blessed.?css`])
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(cleanCSS({ compatibility: '*' }))
 		.pipe(
@@ -132,7 +144,7 @@ gulp.task('cleancss', function() {
 });
 
 gulp.task('styles', function(callback) {
-	gulp.series('sass', 'minifycss')(callback);
+	gulp.series('sass', 'bless', 'minifycss')(callback);
 });
 
 // Run:

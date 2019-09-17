@@ -243,7 +243,7 @@ figcaption {
     .input-group {
       float: right;
       input.field {
-        font-size: $navbar-font-size;
+        font-size: 12px;
         width: 0;
         z-index: 3;
         top: 0;
@@ -252,6 +252,7 @@ figcaption {
         transition: 0.3s;
         background: none;
         border-color: transparent;
+        cursor: pointer;
         &:focus {
           width: 300px;
           background: #fff;

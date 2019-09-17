@@ -66,9 +66,23 @@ if ( get_field('publication_download') ) {
 
 <article <?php post_class('card'); ?> id="post-<?php the_ID(); ?>">
 	
-	<div class="wrapper-thumb"><a href="<?= esc_url( get_permalink() ); ?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top']) ?></a></div>
+	<div class="wrapper-thumb">
+		<a href="<?= esc_url( get_permalink() ); ?>">
+			<?php 
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top']);
+				} elseif ( 'publications' == get_post_type() ) { ?>
+					<img src="<?= get_template_directory_uri() . '/images/publications-default-header.jpg' ?>" />
+			<?php
+				} elseif ( 'post' == get_post_type() ) { ?>
+					<img src="<?= get_template_directory_uri() . '/images/post-default-thumbnail.jpg' ?>" />
+			<?php
+				}
+			?>			
+		</a>
+	</div>
 
-	<div class="card-body">
+	<div class="card-body pb-0">
 		<header class="entry-header mb-2">
 
 			<?php
@@ -103,18 +117,20 @@ if ( get_field('publication_download') ) {
 
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
+	</div><!-- .card-body -->
 
-			<a href="<?= esc_url ( get_permalink() ); ?>" class="card-link btn btn-sm btn-dark"><?php esc_attr_e( 'Read More...', 'understrap' ); ?></a>
-			
-			<?php if ( !empty($download) ) : $download = (object) $download; ?>
-			
-				<a href="<?= $download->url ?>" class="card-link btn btn-sm btn-success"><?php esc_attr_e( 'Download', 'understrap' ); ?></a>
+	<footer class="entry-footer card-footer">
 
-			<?php endif; ?>
+		<a href="<?= esc_url ( get_permalink() ); ?>" class="card-link btn btn-sm btn-dark"><?php esc_attr_e( 'Read More...', 'understrap' ); ?></a>
+		
+		<?php if ( !empty($download) ) : $download = (object) $download; ?>
+		
+			<a href="<?= $download->url ?>" class="card-link btn btn-sm btn-success"><?php esc_attr_e( 'Download', 'understrap' ); ?></a>
 
-		</footer><!-- .entry-footer -->
-	</div>
+		<?php endif; ?>
+
+	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+
 <?php endif; ?>

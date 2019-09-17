@@ -37,13 +37,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main card-columns" id="main">
+			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
+
+					<?php $i = get_option( 'posts_per_page' ); ?>
 
 					<?php /* Start the Loop */ ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>
+
+						<?php if ( 0 == $i % 3) : ?>
+							<div class="card-deck">
+						<?php endif; ?>
 
 						<?php
 
@@ -53,7 +59,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						get_template_part( 'loop-templates/content', get_post_format() );
+						$i -= 1;
 						?>
+
+						<?php if ( 0 == $i % 3 ) : ?>
+							</div>
+						<?php endif; ?>
 
 					<?php endwhile; ?>
 

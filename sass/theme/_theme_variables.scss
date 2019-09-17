@@ -5,7 +5,15 @@
 
 $primary: #c41424;
 $secondary: #bbb7a8;
+$white: #f6f6f6;
+
+$navbar-dark-color: rgba($white, 0.75);
+$navbar-dark-hover-color: rgba($white, 0.9);
 
 $font-family-san-serif: 'Montserrat', san-serif;
 $font-family-serif: 'Faustina', serif;
-$tight-letter-spacing: -1px;
+$font-size-base: 1rem;
+$tight-letter-spacing: -0.5px;
+$tighter-letter-spacing: -1px;
+
+$navbar-font-size: 80%;

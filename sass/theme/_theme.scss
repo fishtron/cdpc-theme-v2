@@ -26,21 +26,9 @@ a:hover {
   text-decoration: none;
 }
 
-// zero outside gutters
-/*
-.row {
-  > [class*=col-]:first-child {
-    padding-left: 0;
-  }
-  > [class*=col-]:last-child {
-    padding-right: 0;
-  }
-}
-*/
-
 blockquote, .blockquote {
   font-family: $font-family-serif;
-  letter-spacing: -1px;
+  letter-spacing: $tight-letter-spacing;
   p {
     font-size: $font-size-base * 2;
     font-weight: $font-weight-bold;
@@ -60,7 +48,7 @@ figcaption {
 .navbar {
   &.bg-primary {
     .navbar-brand {
-      color: #fff;
+      color: $white;
     }
   }
   #wrapper-logo {
@@ -74,7 +62,7 @@ figcaption {
     li {
       a {
         text-transform: uppercase;
-        font-size: $small-font-size;
+        font-size: $navbar-font-size;
         font-weight: $font-weight-bold;
       }
       @include media-breakpoint-down(sm) {
@@ -88,7 +76,7 @@ figcaption {
       &.nav-btn-donate {
         margin-top: -2px;
         a {
-          color: rgba(255,255,255,1);
+          color: rgba($white, 1);
           padding: 5px;
         }
       }
@@ -112,7 +100,7 @@ figcaption {
     margin: 1.5rem auto;
     width: 120px;
     content: '';
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $white;
   }
 }
 
@@ -152,55 +140,7 @@ figcaption {
   letter-spacing: $tight-letter-spacing;
 }
 
-// pulse animation: with thanks to https://codepen.io/olam/pen/zcqea
-.pulse {
-  display: block;
-  cursor: pointer;
-  box-shadow: 0 0 0 rgba(255,255,255, 0.4);
-  animation: pulse 2s infinite;
-}
-
-.pulse:hover {
-  animation: none;
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
-  }
-  70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(255,255,255, 0);
-  }
-  100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
-  }
-}
-@keyframes pulse {
-  0% {
-    -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
-    box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
-  }
-  70% {
-      -moz-box-shadow: 0 0 0 10px rgba(255,255,255, 0);
-      box-shadow: 0 0 0 10px rgba(255,255,255, 0);
-  }
-  100% {
-      -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
-      box-shadow: 0 0 0 0 rgba(255,255,255, 0);
-  }
-} // end pulse animation
-
 /* Beaver Builder Overrides */
-
-// zero gutters on non BB pages so header and content line up
-/*
-body:not(.fl-builder) {
-  .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-*/
 
 .wrapper {
   &#full-width-page-wrapper {
@@ -221,7 +161,7 @@ body:not(.fl-builder) {
     padding-top: 0;
     .hero-header {
       position: relative;
-      background-color: rgba(0, 0, 0, .85);
+      background-color: rgba($black, .85);
       overflow: visible;
       margin-bottom: $spacer * 3;
       &.overlay:before{
@@ -233,7 +173,7 @@ body:not(.fl-builder) {
         height:100%;
         display: block;
         z-index:0;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba($black, 0.5);
       }
       * {
         position: relative;
@@ -298,7 +238,7 @@ body:not(.fl-builder) {
     .input-group {
       float: right;
       input.field {
-        font-size: 12px;
+        font-size: $navbar-font-size;
         width: 0;
         z-index: 3;
         top: 0;
@@ -322,13 +262,13 @@ body:not(.fl-builder) {
         z-index: 2;
         input.submit, button.submit {
           text-transform: uppercase;
-          color: rgba(255,255,255,0.5);
+          color: $navbar-dark-color;
           position: absolute;
           display: inline-block;
           top: 0;
           right: 0;
           &:hover {
-            color: rgba(255,255,255,0.75);
+            color: $navbar-dark-hover-color;
           }
         }
       }
@@ -341,16 +281,16 @@ body:not(.fl-builder) {
       ul li a {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: .8rem;
+        font-size: $navbar-font-size;
       }
       &.wpml-ls-legacy-list-horizontal {
         li.wpml-ls-item {
           border-right: solid 1px;
-          border-color: rgba(255, 255, 255, 0.5);
+          border-color: $navbar-dark-color;
           a.wpml-ls-link {
-            opacity: .5;
+            color: $navbar-dark-color;
             &:hover {
-              opacity: .75;
+              color: $navbar-dark-hover-color;
               text-decoration: none;
             }
           }
@@ -375,19 +315,12 @@ body:not(.fl-builder) {
         &.wpml-ls-legacy-list-horizontal {
           .wpml-ls-item {
             a.wpml-ls-link {
-              color: #fff;
+              color: $navbar-dark-color;
             }
           }
         }
       }
     }
-  }
-}
-
-.publication-wrapper {
-  font-size: 80%;
-  h3 {
-    font-style: 1.5rem;
   }
 }
 
@@ -600,6 +533,44 @@ body:not(.fl-builder) {
   }
 }
 
+// pulse animation: with thanks to https://codepen.io/olam/pen/zcqea
+.pulse {
+  display: block;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba($white, 0.4);
+  animation: pulse 2s infinite;
+}
+
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba($white, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba($white, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba($white, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba($white, 0.4);
+    box-shadow: 0 0 0 0 rgba($white, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba($white, 0);
+      box-shadow: 0 0 0 10px rgba($white, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba($white, 0);
+      box-shadow: 0 0 0 0 rgba($white, 0);
+  }
+} // end pulse animation
+
 
 /* Blog/Archive page customisations */
 
@@ -674,6 +645,12 @@ body:not(.fl-builder) {
   }
 }
 
+.publication-wrapper {
+  font-size: 80%;
+  h3 {
+    font-style: 1.5rem;
+  }
+}
 
 /* People pages customisations */
 

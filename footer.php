@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-8 col-xs-12">
 				<div class="">
 					CDPC available in: <?php do_action( 'wpml_footer_language_selector'); ?>
 				</div>
@@ -30,13 +30,42 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php echo get_bloginfo('name'); ?> &copy; 2019. <a href="<?php echo get_bloginfo('wpurl'); ?>/legal/disclaimer">Disclaimer</a>
+						<?php echo get_bloginfo('name'); ?> &copy; 2019.
+						<?php
+						  wp_nav_menu(
+						    array(
+						      'theme_location'  => 'legal_menu',
+						      'container_class' => '',
+						      'container_id'    => 'footer-legal-menu',
+						      'menu_class'      => 'navbar-nav',
+						      'fallback_cb'     => '',
+						      'menu_id'         => 'legal_menu',
+						      'depth'           => 1,
+						      'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						    )
+						  );
+						?>
 
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
 
 			</div><!--col end -->
+
+			<div class="col-md-4 col-xs-12">
+				<ul class="social-links light">
+					<li>
+						<a target="_blank" href="https://twitter.com/CANdrugpolicy" title="Follow us on Twitter">
+							<i class="fa fa-twitter"></i> <span>Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.facebook.com/CANdrugpolicy" title="Follow us on Facebook">
+							<i class="fa fa-facebook"></i> <span>Facebook</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 
 		</div><!-- row end -->
 

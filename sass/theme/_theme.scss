@@ -429,9 +429,10 @@ body:not(.fl-builder) {
   }
 } // end bouncy arrow
 
-.social-icons {
+.social-links {
   padding-left: 0;
   list-style: none;
+  transition: 0.3s;
   > li {
     display: inline-block;
     margin-left: 5px;
@@ -445,7 +446,7 @@ body:not(.fl-builder) {
         border-radius: 4px;
         font-size: 24px;
         text-align: center;
-        padding-top: 15%;
+        padding-top: 18%;
         transition: all 0.1s ease-in-out;
         margin-bottom: 5px;
       }
@@ -517,45 +518,56 @@ body:not(.fl-builder) {
 
 
 /* Footer */
-
-#wrapper-footer-full, #wrapper-footer {
+#wrapper-footer-full {
   padding-top: $spacer * 3;
+  #footer-text-sfu-en, #footer-text-sfu-fr {
+    // hardcoding the width because widget count returns
+    // both en and fr versions of the same widget as active
+    // and messes up the dynamic grid
+    @include make-col(12);
+    @include media-breakpoint-between(sm,lg) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+  }
+  .nb-contact-form {
+    @include make-col(12);
+    @include media-breakpoint-between(sm,lg) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+    margin-top: $spacer * 1.5;
+    h3 {
+      color: $secondary;
+    }
+    input.submit-button {
+      color: $primary;
+    }
+  }
+}
+#wrapper-footer {
+  padding-top: 0;
+  .wpml-ls-statics-footer.wpml-ls-legacy-list-horizontal {
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  #footer-legal-menu {
+    display: inline-block;
+  }
+  .social-links {
+    text-align: right;
+  }
+}
+#wrapper-footer-full, #wrapper-footer {
   background-color: $black;
   .container {
     color: $secondary;
     font-size: $font-size-sm;
-    .wpml-ls-statics-footer.wpml-ls-legacy-list-horizontal {
-      display: inline-block;
-      padding-left: 0;
-    }
-    .nb-contact-form {
-      @include make-col(12);
-      @include media-breakpoint-between(sm,lg) {
-        @include make-col(6);
-      }
-      @include media-breakpoint-up(lg) {
-        @include make-col(4);
-      }
-      margin-top: $spacer * 1.5;
-      h3 {
-        color: $secondary;
-      }
-      input.submit-button {
-        color: $primary;
-      }
-    }
-    #footer-text-sfu-en, #footer-text-sfu-fr {
-      // hardcoding the width because widget count returns
-      // both en and fr versions of the same widget as active
-      // and messes up the dynamic grid
-      @include make-col(12);
-      @include media-breakpoint-between(sm,lg) {
-        @include make-col(6);
-      }
-      @include media-breakpoint-up(lg) {
-        @include make-col(8);
-      }
-    }
   }
 }
 

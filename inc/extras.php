@@ -133,3 +133,14 @@ if ( ! function_exists( 'understrap_mobile_web_app_meta' ) ) {
 	}
 }
 add_action( 'wp_head', 'understrap_mobile_web_app_meta' );
+
+/**
+ * Production URL 
+ *
+ */
+if (! function_exists('be_prefix_production_url') ) {
+	function be_prefix_production_url( $url ) { 
+		return 'https://www.drugpolicy.ca';
+	}
+}
+add_filter( 'be_media_from_production_url', 'be_prefix_production_url' );

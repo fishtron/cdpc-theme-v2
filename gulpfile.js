@@ -15,10 +15,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
-var bless = require('gulp-bless');
 var gulpSequence = require('gulp-sequence');
 var replace = require('gulp-replace');
 var autoprefixer = require('autoprefixer');
+var touch = require('gulp-touch-cmd');
 
 // Configuration file to keep your code DRY
 var cfg = require('./gulpconfig.json');
@@ -42,7 +42,8 @@ gulp.task('sass', function() {
 		.pipe(sass({ errLogToConsole: true }))
 		.pipe(postcss([autoprefixer()]))
 		.pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 	return stream;
 });
 
@@ -86,41 +87,13 @@ gulp.task(
 	})
 );
 
-gulp.task('bless', function() {
-	return gulp
-		.src(paths.css + '/theme.css')
-    .pipe(bless({ 
-    	imports    : true,
-    	cacheBuster: false
-    }))
-    .pipe(gulp.dest(paths.css));
-});
-
-gulp.task('cssnano', function() {
-	return gulp
-		.src(paths.css + '/theme.css')
-		.pipe(sourcemaps.init({ loadMaps: true }))
-		.pipe(
-			plumber({
-				errorHandler: function(err) {
-					console.log(err);
-					this.emit('end');
-				}
-			})
-		)
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(cssnano({ discardComments: { removeAll: true } }))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css));
-});
-
 // Run:
 // gulp minifycss
 // Minifies CSS files
 
 gulp.task('minifycss', function() {
 	return gulp
-		.src( [`${paths.css}/theme.css`, `${paths.css}/theme-blessed.?css`])
+		.src(`${paths.css}/theme.css`)
 		.pipe(sourcemaps.init({ loadMaps: true }))
 		.pipe(cleanCSS({ compatibility: '*' }))
 		.pipe(
@@ -133,7 +106,8 @@ gulp.task('minifycss', function() {
 		)
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest(paths.css));
+		.pipe(gulp.dest(paths.css))
+		.pipe(touch());
 });
 
 gulp.task('cleancss', function() {
@@ -143,8 +117,14 @@ gulp.task('cleancss', function() {
 		.pipe(rimraf());
 });
 
+gulp.task('touch', function() {
+	return gulp
+		.src(`${paths.css}/*.*`)
+	  .pipe(touch());
+});
+
 gulp.task('styles', function(callback) {
-	gulp.series('sass', 'bless', 'minifycss')(callback);
+	gulp.series('sass', 'minifycss')(callback);
 });
 
 // Run:

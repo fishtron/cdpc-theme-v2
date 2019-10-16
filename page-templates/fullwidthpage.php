@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width Page
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * Template for displaying a full width page.
  *
  * @package understrap
  */
@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper <?php if ( get_field('hero_image') ) : ?>has-hero<?php endif; ?> <?php if ( is_front_page() || is_home() ) : ?>py-0<?php endif; ?>" id="full-width-page-wrapper">
 
-	<?php /*get_template_part( 'global-templates/hero-header' );*/ ?>
+	<?php get_template_part( 'global-templates/hero-header' ); ?>
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 

@@ -37,11 +37,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<?php get_search_form(); ?>
 
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+							<?php the_widget( 'WP_Widget_Recent_Posts', null, array('before_widget' => '<div class="widget widget_recent_posts mt-5">', 'after_widget' => '</div>') ); ?>
 
 							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
-								<div class="widget widget_categories">
+								<div class="widget widget_categories mt-5">
 
 									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
 

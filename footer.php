@@ -34,7 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php
 						  wp_nav_menu(
 						    array(
-						      'theme_location'  => 'legal_menu',
+						      'theme_location'  => 'legal',
 						      'container_class' => '',
 						      'container_id'    => 'footer-legal-menu',
 						      'menu_class'      => 'navbar-nav',
@@ -62,6 +62,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<li>
 						<a target="_blank" href="https://www.facebook.com/CANdrugpolicy" title="Follow us on Facebook">
 							<i class="fa fa-facebook"></i> <span>Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.instagram.com/candrugpolicy" title="Follow us on Instagram">
+							<i class="fa fa-instagram"></i> <span>Instagram</span>
 						</a>
 					</li>
 				</ul>

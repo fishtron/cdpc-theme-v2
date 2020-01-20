@@ -233,8 +233,8 @@ msgid "Primary Menu"
 msgstr "Menú principal"
 
 #: ../inc/setup.php:98
-msgid "Read More..."
-msgstr "Leer más..."
+msgid "Read More"
+msgstr "Leer más"
 
 #: ../inc/custom-comments.php:12
 msgid "Name"

@@ -278,8 +278,8 @@ msgid "Primary Menu"
 msgstr "Primarni meni"
 
 #: inc/setup.php:122
-msgid "Read More..."
-msgstr "Preberi več..."
+msgid "Read More"
+msgstr "Preberi več"
 
 #: inc/widgets.php:14
 msgid "Right Sidebar"

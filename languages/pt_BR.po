@@ -380,8 +380,8 @@ msgid "Primary Menu"
 msgstr "Menu Prim&aacute;rio"
 
 #: ../inc/setup.php:98
-msgid "Read More..."
-msgstr "Leia mais..."
+msgid "Read More"
+msgstr "Leia mais"
 
 #: ../inc/widgets.php:10
 msgid "Sidebar"

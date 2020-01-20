@@ -276,8 +276,8 @@ msgid "Primary Menu"
 msgstr "Hovedmeny"
 
 #: inc/setup.php:122
-msgid "Read More..."
-msgstr "Les meir..."
+msgid "Read More"
+msgstr "Les meir"
 
 #: inc/widgets.php:14
 msgid "Right Sidebar"

@@ -275,8 +275,8 @@ msgid "Primary Menu"
 msgstr "Birincil Menü"
 
 #: inc/setup.php:122
-msgid "Read More..."
-msgstr "Daha fazlasını oku…"
+msgid "Read More"
+msgstr "Daha fazlasını oku"
 
 #: inc/widgets.php:14
 msgid "Right Sidebar"

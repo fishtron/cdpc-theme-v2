@@ -276,8 +276,8 @@ msgid "Primary Menu"
 msgstr "Menu principal"
 
 #: inc/setup.php:122
-msgid "Read More..."
-msgstr "Lire la suite..."
+msgid "Read More"
+msgstr "Lire la suite"
 
 #: inc/widgets.php:14
 msgid "Right Sidebar"

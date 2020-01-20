@@ -236,7 +236,7 @@ msgid "Primary Menu"
 msgstr "Huvud meny"
 
 #: ../inc/setup.php:98
-msgid "Read More..."
+msgid "Read More"
 msgstr "Läs mer"
 
 #: ../inc/custom-comments.php:12

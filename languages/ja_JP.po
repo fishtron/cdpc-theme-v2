@@ -275,8 +275,8 @@ msgid "Primary Menu"
 msgstr "メインメニュー"
 
 #: inc/setup.php:122
-msgid "Read More..."
-msgstr "続きを読む..."
+msgid "Read More"
+msgstr "続きを読む"
 
 #: inc/widgets.php:14
 msgid "Right Sidebar"

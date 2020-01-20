@@ -267,8 +267,8 @@ msgid "Primary Menu"
 msgstr "주 메뉴"
 
 #: ../inc/setup.php:98
-msgid "Read More..."
-msgstr "더보기..."
+msgid "Read More"
+msgstr "더보기"
 
 #: ../inc/custom-comments.php:12
 msgid "Name"

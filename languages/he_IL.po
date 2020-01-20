@@ -218,8 +218,8 @@ msgid "Primary Menu"
 msgstr "תפריט ראשי"
 
 #: inc/setup.php:121
-msgid "Read More..."
-msgstr "קרא עוד..."
+msgid "Read More"
+msgstr "קרא עוד"
 
 #: inc/template-tags.php:26
 #, php-format

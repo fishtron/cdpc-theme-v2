@@ -42,6 +42,9 @@ blockquote, .blockquote {
 
 figcaption {
   padding-top: $spacer * 0.25;
+  color: $gray-600;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .navbar {
@@ -196,7 +199,7 @@ figcaption {
       background-color: rgba($black, .85);
       overflow: visible;
       margin-bottom: $spacer * 3;
-      &.overlay:before{
+      &.overlay:before {
         position: absolute;
         content:" ";
         top:0;
@@ -222,7 +225,6 @@ figcaption {
   }
 }
 
-
 .fl-heading {
   /* Dual-colour headings */
   .fl-heading-text {
@@ -237,7 +239,6 @@ figcaption {
   blockquote, .blockquote {
     p {
       font-size: $font-size-base * 2;
-      font-weight: $font-weight-bold;
       line-height: $line-height-base * 0.8;
     }
   }

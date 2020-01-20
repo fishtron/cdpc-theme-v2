@@ -27,13 +27,13 @@ if ( $side_quote ) { $has_sidebar = true; }
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content <?php if ($has_sidebar) : ?>row<?php endif; ?>">
+	<div class="entry-content <?php /*if ($has_sidebar) : ?>row<?php endif;*/ ?>">
 
-		<?php if ($has_sidebar) : ?><div class="col-md-9"><?php endif; ?>
+		<?php /*if ($has_sidebar) : ?><div class="col-md-9"><?php endif; */?>
 
 		<?php the_content(); ?>
 
-		<?php if ($has_sidebar) : ?>
+		<?php /*if ($has_sidebar) : ?>
 			</div>
 			<div class="col-md-3">
 
@@ -43,10 +43,10 @@ if ( $side_quote ) { $has_sidebar = true; }
 						<?= $side_quote ?>
 					</blockquote>
 				</div>
-			<?php endif; ?>
+			<?php endif; */?>
 
 		</div>
-		<?php endif; ?>
+		<?php /*endif;*/ ?>
 
 		<?php
 		wp_link_pages(
@@ -58,11 +58,5 @@ if ( $side_quote ) { $has_sidebar = true; }
 		?>
 
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
-
-	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

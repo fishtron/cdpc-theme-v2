@@ -17,11 +17,11 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<header class="entry-header row my-3">
 
 		<?php
 			if ( empty( get_field('hero_image') ) && !is_home() && !is_front_page() && 'people' != get_post_type() ) { 
-				the_title( '<h1 class="entry-title">', '</h1>' ); 
+				the_title( '<h1 class="entry-title col-12">', '</h1>' ); 
 			}
 		?>
 
@@ -43,7 +43,7 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 
 		<?php endif; ?>
 
-		<div class="entry-meta">
+		<div class="entry-meta col-12">
 
 			<?php if ( 'post' == get_post_type() ) { understrap_posted_on(); } ?>
 
@@ -52,7 +52,7 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 	</header><!-- .entry-header -->
 
 	<div class="row">
-		<div class="entry-content <?php if ($has_sidebar) : ?>col-md-9<?php else : ?>col<?php endif; ?>">
+		<div class="entry-content col">
 
 			<?php the_content(); ?>
 
@@ -80,7 +80,7 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 
 		</div><!-- .entry-content -->
 
-		<?php if ($has_sidebar) : ?>
+		<?php /* if ($has_sidebar) : ?>
 		<div class="col-md-3">
 
 			<?php if ( !empty($download) ) : ?>
@@ -102,7 +102,7 @@ if ( !empty($download) || !empty($side_quote) ) { $has_sidebar = true; }
 			<?php endif; ?>
 
 		</div>
-		<?php endif; ?>
+		<?php endif;*/ ?>
 	</div>
 
 	<footer class="entry-footer">

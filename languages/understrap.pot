@@ -270,7 +270,7 @@ msgid "Primary Menu"
 msgstr ""
 
 #: inc/setup.php:122
-msgid "Read More..."
+msgid "Read More"
 msgstr ""
 
 #: inc/widgets.php:14

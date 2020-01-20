@@ -121,7 +121,7 @@ if ( get_field('publication_download') ) {
 
 	<footer class="entry-footer card-footer">
 
-		<a href="<?= esc_url ( get_permalink() ); ?>" class="card-link btn btn-sm btn-dark"><?php esc_attr_e( 'Read More...', 'understrap' ); ?></a>
+		<a href="<?= esc_url ( get_permalink() ); ?>" class="card-link btn btn-sm btn-dark"><?php esc_attr_e( 'Read More', 'understrap' ); ?></a>
 		
 		<?php if ( !empty($download) ) : $download = (object) $download; ?>
 		

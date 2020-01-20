@@ -72,10 +72,10 @@ if ( get_field('publication_download') ) {
 				if ( has_post_thumbnail() ) {
 					the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top']);
 				} elseif ( 'publications' == get_post_type() ) { ?>
-					<img src="<?= get_template_directory_uri() . '/images/publications-default-header.jpg' ?>" />
+					<img src="<?= get_template_directory_uri() . '/img/publications-default-header.jpg' ?>" />
 			<?php
 				} elseif ( 'post' == get_post_type() ) { ?>
-					<img src="<?= get_template_directory_uri() . '/images/post-default-thumbnail.jpg' ?>" />
+					<img src="<?= get_template_directory_uri() . '/img/post-default-thumbnail.jpg' ?>" />
 			<?php
 				}
 			?>			

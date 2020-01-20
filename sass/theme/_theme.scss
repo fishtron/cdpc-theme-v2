@@ -55,6 +55,10 @@ figcaption {
     .navbar-brand {
       position: absolute;
       top: -36px;
+      img {
+        max-height: 101px;
+        width: auto;
+      }
     }
   }
   ul.navbar-nav {
@@ -69,30 +73,63 @@ figcaption {
           white-space: normal;
         }    
       }
+      &.current-menu-item, &.current-page-ancestor {
+        border-bottom: 1px solid $white;
+      }
       &.nav-subitem {
-        margin-left: 1rem;
+        a {
+          text-transform: initial;
+          padding-left: 2.25rem;
+        }
       }
       &.nav-btn-donate {
         margin-top: -2px;
+        margin-left: 7px;
         a {
           color: rgba($white, 1);
           padding: 5px;
         }
       }
-      &:hover>.dropdown-menu {
-        display: block;
+      .dropdown-header {
+        text-transform: uppercase;
+      }
+      .dropdown-menu {
+        li {
+          a {
+            font-weight: normal;
+          }
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        &:hover>.dropdown-menu {
+          display: block;
+        }
       }
     }
   }
 }
 
 .jumbotron {
-  h2:before {
-    display: block;
-    margin: 1.5rem auto;
-    width: 120px;
-    content: '';
-    border-bottom: 1px solid $white;
+  @include media-breakpoint-between(sm,md) {
+    h1 {
+      font-size: 2.75rem;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    h1 {
+      font-size: 2.25rem;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+  h2 {
+    font-weight: normal;
   }
 }
 
@@ -346,6 +383,19 @@ figcaption {
   }
 }
 
+.separator:before {
+  display: block;
+  margin: 1.5rem auto;
+  width: 120px;
+  content: '';
+  border-bottom: 1px solid $gray-500;
+  .light {
+    border-color: $white;
+  }
+  .dark {
+    border-color: $gray-800;
+  }
+}
 // bouncy arrow - with thanks to https://codepen.io/bisaillonyannick/pen/pvZeGg
 .arrow {
   text-align: center;

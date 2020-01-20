@@ -16,6 +16,13 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+$has_header = false;
+if ( 'post' == get_post_type() ) {
+	$has_header = true;
+} elseif ( get_field('hero_image') ) {
+	$has_header = true;
+}
+
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
@@ -23,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
 
-<div class="wrapper <?php if ( get_field('hero_image') ) : ?>has-hero<?php endif; ?>" id="index-wrapper">
+<div class="wrapper <?php if ( $has_header ) : ?>has-hero<?php endif; ?>" id="index-wrapper">
 
 	<?php get_template_part( 'global-templates/hero-header' ); ?>
 

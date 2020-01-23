@@ -55,6 +55,7 @@ figcaption {
 }
 
 .navbar {
+  font-family: $navbar-font-family;
   &.bg-primary {
     .navbar-brand {
       color: $white;
@@ -268,7 +269,7 @@ figcaption {
 .nb-contact-form {
   h3 { // TODO: this should not be an H3 in markup
     color: #8D8F92;
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-serif;
     font-size: $font-size-base;
   }
 }
@@ -607,7 +608,7 @@ figcaption {
     }
     margin-top: $spacer * 1.25;
     h3 {
-      color: $secondary;
+      color: $gray-500;
     }
     input.submit-button {
       color: $primary;
@@ -629,9 +630,9 @@ figcaption {
   }
 }
 #wrapper-footer-full, #wrapper-footer {
-  background-color: $black;
+  background-color: $primary;
   .container {
-    color: $secondary;
+    color: $gray-500;
     font-size: $font-size-sm;
   }
 }

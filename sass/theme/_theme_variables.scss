@@ -8,8 +8,8 @@ $tomorrow-blue: #4fa2a9;
 $growth-green: #88b48e;
 $hope-green: #d8e9bb;
 
-$primary: $tomorrow-blue;
-$secondary: $hope-green;
+$primary: $night-blue;
+$secondary: $growth-green;
 $white: whitesmoke;
 
 $navbar-dark-color:                 rgba($white, 1);
@@ -23,4 +23,5 @@ $font-size-base: 1rem;
 $tight-letter-spacing: -0.5px;
 $tighter-letter-spacing: -1px;
 
-$navbar-font-size: 90%;
+$navbar-font-family: $font-family-sans-serif;
+$navbar-font-size: 80%;

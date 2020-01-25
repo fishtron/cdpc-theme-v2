@@ -261,11 +261,9 @@ figcaption {
 
 /* Let's Play With Widgets */
 
-.nb-contact-form, .signup-widget, .signup-popup {
-  iframe {
-    border: 0;
-    width: 100%;
-  }
+iframe {
+  border: 0;
+  width: 100%;
 }
 
 .nb-contact-form {

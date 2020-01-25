@@ -178,8 +178,10 @@ figcaption {
 }
 
 .btn {
+  font-family: $font-family-sans-serif;
   letter-spacing: $tight-letter-spacing;
 }
+
 
 /* Beaver Builder Overrides */
 
@@ -381,6 +383,7 @@ figcaption {
       ul li a {
         text-transform: uppercase;
         font-weight: bold;
+        font-family: $navbar-font-family;
         font-size: $navbar-font-size;
       }
       &.wpml-ls-legacy-list-horizontal {
@@ -630,7 +633,7 @@ figcaption {
   }
 }
 #wrapper-footer-full, #wrapper-footer {
-  background-color: $primary;
+  background-color: $black;
   .container {
     color: $gray-500;
     font-size: $font-size-sm;

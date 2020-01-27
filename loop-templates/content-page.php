@@ -27,26 +27,9 @@ if ( $side_quote ) { $has_sidebar = true; }
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content <?php /*if ($has_sidebar) : ?>row<?php endif;*/ ?>">
-
-		<?php /*if ($has_sidebar) : ?><div class="col-md-9"><?php endif; */?>
+	<div class="entry-content">
 
 		<?php the_content(); ?>
-
-		<?php /*if ($has_sidebar) : ?>
-			</div>
-			<div class="col-md-3">
-
-			<?php if ( $side_quote ) : ?>
-				<div class="side-quote">
-					<blockquote>
-						<?= $side_quote ?>
-					</blockquote>
-				</div>
-			<?php endif; */?>
-
-		</div>
-		<?php /*endif;*/ ?>
 
 		<?php
 		wp_link_pages(

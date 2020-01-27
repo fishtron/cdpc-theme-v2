@@ -22,9 +22,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<div class="col-md-8 col-xs-12">
+				<?php /*
 				<div class="">
 					Getting to Tomorrow available in: <?php do_action( 'wpml_footer_language_selector'); ?>
 				</div>
+				*/ ?>
 
 				<footer class="site-footer" id="colophon">
 

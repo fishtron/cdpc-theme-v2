@@ -261,6 +261,39 @@ figcaption {
   letter-spacing: $tight-letter-spacing;
 }
 
+.fl-module-post-slider {
+  .bx-wrapper {
+    margin-bottom: 0;
+    .fl-post-slider-content {
+      * {
+        max-width: 1060px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        // I'm so sorry
+      }
+      .fl-post-slider-feed-meta {
+        font-size: $small-font-size;
+      }
+      .fl-post-slider-feed-content {
+        letter-spacing: $tighter-letter-spacing;
+        font-size: $font-size-base * 1.25;
+      }
+    }
+    .bx-controls {
+      bottom: 3rem;
+      margin-top: 0;
+      .bx-pager-item {
+        .bx-pager-link {
+          background: $gray-500;
+          &.active {
+            background: $gray-100;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* Let's Play With Widgets */
 
@@ -645,41 +678,6 @@ iframe {
 
 
 /* Homepage customisations */
-
-.home {
-  .fl-module-post-slider {
-    .bx-wrapper {
-      margin-bottom: 0;
-      .fl-post-slider-content {
-        * {
-          max-width: 1060px;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          // I'm so sorry
-        }
-        .fl-post-slider-feed-meta {
-          font-size: $small-font-size;
-        }
-        .fl-post-slider-feed-content {
-          letter-spacing: $tighter-letter-spacing;
-          font-size: $font-size-base * 1.25;
-        }
-      }
-      .bx-controls {
-        bottom: 3rem;
-        margin-top: 0;
-        .bx-pager-item {
-          .bx-pager-link {
-            background: $gray-500;
-            &.active {
-              background: $gray-100;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 // pulse animation: with thanks to https://codepen.io/olam/pen/zcqea
 .pulse {

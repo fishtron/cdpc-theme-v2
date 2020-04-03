@@ -27,8 +27,8 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
-    "@babel/preset-env": "^7.8.7",
-    "bootstrap": "^4.4.1",
+    "@babel/preset-env": "^7.6.2",
+    "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "font-awesome": "^4.7.0",
@@ -52,8 +52,8 @@
     "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "autoprefixer": "^9.7.4",
+    "@babel/core": "^7.6.2",
+    "autoprefixer": "^9.6.1",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-touch-cmd": "0.0.1"

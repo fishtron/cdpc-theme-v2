@@ -32,6 +32,7 @@ h4 {
 
 strong {
   font-weight: bold;
+  letter-spacing: 0.05rem;
 }
 
 a:hover {
@@ -40,7 +41,10 @@ a:hover {
 
 blockquote, .blockquote {
   font-family: $font-family-serif;
-  letter-spacing: $tight-letter-spacing;
+  color: $tomorrow-blue;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  //letter-spacing: $tight-letter-spacing;
   cite {
     position: relative;
     font-size: $small-font-size;
@@ -181,7 +185,7 @@ figcaption {
 
 .lead {
   font-size: $font-size-base * 1.25;
-  letter-spacing: $tighter-letter-spacing;
+  //letter-spacing: $tighter-letter-spacing;
 }
 
 .btn {
@@ -257,6 +261,9 @@ figcaption {
     p {
       font-size: $font-size-base * 2;
       line-height: $line-height-base * 0.8;
+      color: $tomorrow-blue;
+      font-weight: bold;
+      letter-spacing: 0.05rem;
     }
   }
 }
@@ -300,7 +307,7 @@ figcaption {
         font-size: $small-font-size;
       }
       .fl-post-slider-feed-content {
-        letter-spacing: $tighter-letter-spacing;
+        //letter-spacing: $tighter-letter-spacing;
         font-size: $font-size-base * 1.25;
       }
     }

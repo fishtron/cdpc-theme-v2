@@ -312,39 +312,22 @@ iframe {
 
 .signup-widget {
   background: $primary;
-  padding: $spacer * 1.5;
+  padding: $spacer * 1.5 $spacer * 1.5 0 $spacer * 1.5;
   @media screen and (min-width: 768px) {
     background: url('../img/cdpc-signup-bg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-color: $primary;
-    padding-left: $spacer * 3;
-    padding-right: $spacer * 3;
-    //position: relative;
   }
   iframe {
-    height: 50px;
-    //position: relative;
+    height: 65px;
   }
   p {
-    //position: relative;
-    //font-size: $font-size-base * 1.25;
     color: $white;
     @media screen and (min-width: 768px) {
-      padding-left: 33%;
+      padding-left: calc(33% + 0.75rem);
     }
   }
-  /*
-  .overlay {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to top right,$primary,rgba(121,121,121,0.4));
-  }
-  */
 }
 
 .signup-popup {
@@ -354,7 +337,7 @@ iframe {
     color: $white;
   }
   iframe {
-    height: 50px;
+    height: 65px;
   }
 }
 

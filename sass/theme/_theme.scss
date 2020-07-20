@@ -44,7 +44,9 @@ blockquote, .blockquote {
   color: $tomorrow-blue;
   font-weight: bold;
   letter-spacing: 0.05rem;
-  //letter-spacing: $tight-letter-spacing;
+  &.wp-block-quote.is-large p, &.wp-block-quote.is-style-large p {
+    font-style: normal;
+  }
   cite {
     position: relative;
     font-size: $small-font-size;

@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php echo get_bloginfo('name'); ?> &copy; 2019.
+						<?php echo get_bloginfo('name'); ?> &copy; <?= date('Y') ?>.
 						<?php
 						  wp_nav_menu(
 						    array(

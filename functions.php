@@ -36,7 +36,7 @@ foreach ( $understrap_includes as $file ) {
 
 /* TODO: refactor this */
 
-/* Publications post type */
+/* Publications post type 
 function register_publications() {
 
 	$labels = array(
@@ -94,7 +94,7 @@ function register_publications() {
 			'hierarchical' => true
 		)
 	);
-}
+} */
 
 /* Quotes post type 
 function register_quotes() {
@@ -156,7 +156,7 @@ function register_quotes() {
 	);
 } */
 
-/* Campaigns post type */
+/* Campaigns post type 
 function register_campaigns() {
 
 	$labels = array(
@@ -214,9 +214,9 @@ function register_campaigns() {
 			'hierarchical' => true
 		)
 	);
-}
+} */
 
-/* People post type */
+/* People post type 
 function register_people() {
 
 	$labels = array(
@@ -274,9 +274,9 @@ function register_people() {
 			'hierarchical' => true
 		)
 	);
-}
+} */
 
-/* Events post type */
+/* Events post type 
 function register_events() {
 
 	$labels = array(
@@ -334,13 +334,13 @@ function register_events() {
 			'hierarchical' => true
 		)
 	);
-}
+} */
 
-add_action( 'init', 'register_publications' );
-/* add_action( 'init', 'register_quotes' ); */
+/* add_action( 'init', 'register_publications' );
+add_action( 'init', 'register_quotes' );
 add_action( 'init', 'register_campaigns' );
 add_action( 'init', 'register_events' );
-add_action( 'init', 'register_people' );
+add_action( 'init', 'register_people' ); */
 
 function cdpc_search_form( $html ) {
   $html = str_replace( 'placeholder="Search ', 'placeholder="Search', $html );

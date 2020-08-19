@@ -39,12 +39,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				  <div class="header-search col">
 						<?php get_search_form(); ?>
 			    </div>
-
-			    <!-- custom language switcher -->
-					<div class="lang-switcher col-auto">
-						<?php do_action('wpml_add_language_selector'); ?>
-					</div>
-					<!-- end custom language switcher -->
 				</div>
 			</div>
 	  </div>

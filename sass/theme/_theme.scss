@@ -18,7 +18,6 @@ h1:not(.entry-title), h2:not(.entry-title) {
 h3, h4, h5, h6 {
   font-family: $font-family-subhead;
   font-weight: $font-weight-bold;
-  text-transform: uppercase;
 }
 
 // reset font size because of current font selection; can be tweaked if fonts change

@@ -2,11 +2,11 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
-$action-red: #c42127;
-$night-blue: #003149;
+$action-red:    #c42127;
+$night-blue:    #003149;
 $tomorrow-blue: #4fa2a9;
-$growth-green: #88b48e;
-$hope-green: #d8e9bb;
+$growth-green:  #88b48e;
+$hope-green:    #d8e9bb;
 
 $primary: $night-blue;
 $secondary: $growth-green;
@@ -20,10 +20,9 @@ $dropdown-link-hover-color:         $white;
 $dropdown-link-hover-bg:            $primary;
 
 $font-family-sans-serif: Montserrat, sans-serif;
-$font-family-serif: Faustina, Georgia, serif;
-$font-family-subhead: 'Barlow Condensed', sans-serif;
-$font-size-base: 1.1rem;
-$tight-letter-spacing: -0.5px;
+$font-family-serif:      Faustina, Georgia, serif;
+$font-family-subhead:   'Barlow Condensed', sans-serif;
+$tight-letter-spacing:   -0.5px;
 $tighter-letter-spacing: -1px;
 
 $navbar-font-family: $font-family-sans-serif;

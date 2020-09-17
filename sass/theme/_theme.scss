@@ -26,10 +26,10 @@ a:hover {
 }
 
 blockquote, .blockquote {
-  //font-family: $font-family-serif;
+  font-family: $font-family-serif;
   color: $tomorrow-blue;
   font-weight: bold;
-  letter-spacing: 0.05rem;
+  letter-spacing: $tight-letter-spacing;
   &.wp-block-quote.is-large p, &.wp-block-quote.is-style-large p {
     font-style: normal;
   }
@@ -294,7 +294,7 @@ figcaption {
         font-size: $small-font-size;
       }
       .fl-post-slider-feed-content {
-        //letter-spacing: $tighter-letter-spacing;
+        letter-spacing: $tighter-letter-spacing;
         font-size: $font-size-base * 1.25;
       }
     }

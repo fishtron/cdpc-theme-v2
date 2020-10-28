@@ -91,9 +91,10 @@ figcaption {
           padding-left: 2.25rem;
         }
       }
-      &.nav-btn-donate, &.nav-btn-cdpc, &.nav-btn-gtt {
+      &.nav-btn-donate, &.nav-btn-cta {
         margin-top: -2px;
         margin-left: 7px;
+        z-index: 3;
         a {
           color: rgba($white, 1);
           padding: 5px;

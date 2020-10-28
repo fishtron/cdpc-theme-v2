@@ -20,15 +20,6 @@ h3, h4, h5, h6 {
   font-weight: $font-weight-bold;
 }
 
-// reset font size because of current font selection; can be tweaked if fonts change
-h3 {
-  font-size: 1.375rem;
-  margin-top: 1.5rem;
-}
-h4 {
-  font-size: 1.25rem;
-}
- 
 h3, h4 {
   margin-top: 40px;
   margin-bottom: 20px;

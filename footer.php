@@ -84,6 +84,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+<?php if ( $_SERVER['SERVER_NAME'] == 'gettingtotomorrow.ca' || $_SERVER['SERVER_NAME'] == 'brokendrugpolicies.ca' ) : ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<?php endif; ?>
+
 <?php if ( $_SERVER['SERVER_NAME'] == 'localhost' ) : ?>
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));

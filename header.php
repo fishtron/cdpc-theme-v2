@@ -20,7 +20,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Faustina&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+	<?php if ( $_SERVER['SERVER_NAME'] == 'gettingtotomorrow.ca' || $_SERVER['SERVER_NAME'] == 'brokendrugpolicies.ca' ) : ?>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+	<?php endif; ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-27324779-6"></script>
 	<script>

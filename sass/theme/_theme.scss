@@ -186,6 +186,12 @@ figcaption {
   font-family: $font-family-sans-serif;
   letter-spacing: $tight-letter-spacing;
 }
+.btn-secondary {
+  color: $white;
+  &:hover {
+    color: $night-blue;
+  }
+}
 
 /* Beaver Builder Overrides */
 

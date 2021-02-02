@@ -329,7 +329,7 @@ iframe {
 
 .signup-widget {
   background: $primary;
-  padding: $spacer * 1.5 $spacer * 1.5 0 $spacer * 1.5;
+  padding: $spacer * 1.5;
   @media screen and (min-width: 768px) {
     background: url('../img/bdp-signup-bg.png');
     background-position: center;
@@ -343,6 +343,9 @@ iframe {
     color: $white;
     @media screen and (min-width: 768px) {
       padding-left: calc(33% + 0.75rem);
+    }
+    &.small {
+      margin-bottom: 0;
     }
   }
 }

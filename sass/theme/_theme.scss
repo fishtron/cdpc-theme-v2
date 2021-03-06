@@ -2,6 +2,7 @@
 
 body {
   font-family: $font-family-sans-serif;
+  background: #f5f5f5;
 }
 
 h1, h2 {
@@ -36,6 +37,11 @@ a:hover {
 blockquote, .blockquote {
   font-family: $font-family-serif;
   letter-spacing: $tight-letter-spacing;
+  color: $secondary;
+  font-weight: 700;
+  p, &.wp-block-quote.is-large p, &.wp-block-quote.is-style-large p {
+    font-style: normal;
+  }
   cite {
     position: relative;
     font-size: $small-font-size;
@@ -218,7 +224,7 @@ figcaption {
         height:100%;
         display: block;
         z-index:0;
-        background-color: rgba($black, 0.5);
+        background-color: rgba(0,0,0,0.5);
       }
       * {
         position: relative;
@@ -488,6 +494,7 @@ iframe {
   }
   span h3 {
     font-size: $font-size-base;
+    margin-top: 0;
   }
 }
 

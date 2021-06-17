@@ -454,50 +454,56 @@ figure.wp-block-embed.is-type-rich iframe {
   height: 100% !important;
 }
 
-.has-red-background-color {
-  background-color: $primary;
+figure.wp-block-embed.wp-has-aspect-ratio iframe {
+  // hack to override hardcoded embed size
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.has-action-red-background-color {
+  background-color: $action-red;
   &:hover {
-    background-color: darken($primary, 10%);
+    background-color: darken($action-red, 10%);
   }
 }
 
-.has-red-color {
-  color: $primary !important;
+.has-action-red-color {
+  color: $action-red !important;
 }
 
-.has-gold-background-color {
-  background-color: $secondary;
+.has-night-blue-background-color {
+  background-color: $night-blue;
   &:hover {
-    background-color: darken($secondary, 10%);
+    background-color: darken($night-blue, 10%);
   }
 }
 
-.has-gold-color {
-  color: $secondary !important;
+.has-night-blue-color {
+  color: $night-blue !important;
 }
 
-.has-grey-background-color {
-  background-color: #6c757d;
+.has-tmr-blue-background-color {
+  background-color: $tomorrow-blue;
 }
 
-.has-grey-color {
-  color: #6c757d !important;
+.has-tmr-blue-color {
+  color: $tomorrow-blue !important;
 }
 
-.has-dark-grey-background-color {
-  background-color: #343a40;
+.has-growth-green-background-color {
+  background-color: $growth-green;
 }
 
-.has-dark-grey-color {
-  color: #343a40 !important;
+.has-growth-green-color {
+  color: $growth-green !important;
 }
 
-.has-white-background-color {
-  background-color: #fbfbfb;
+.has-hope-green-background-color {
+  background-color: $hope-green;
 }
 
-.has-white-color {
-  color: #fbfbfb !important;
+.has-hope-green-color {
+  color: $hope-green !important;
 }
 
 /* Global Blocks */

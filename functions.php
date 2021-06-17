@@ -351,3 +351,37 @@ add_filter( 'get_search_form', 'cdpc_search_form' );
 add_filter( 'excerpt_length', function($length) {
     return 27;
 } );
+
+function cdpc_add_custom_gutenberg_color_palette() {
+	add_theme_support(
+		'editor-color-palette',
+		[
+			[
+				'name'  => esc_html__( 'Action Red', 'cddc' ),
+				'slug'  => 'action-red',
+				'color' => '#c42127',
+			],
+			[
+				'name'  => esc_html__( 'Night Blue', 'cddc' ),
+				'slug'  => 'night-blue',
+				'color' => '#003149',
+			],
+			[
+				'name'  => esc_html__( 'Tomorrow Blue', 'cddc' ),
+				'slug'  => 'tmr-blue',
+				'color' => '#4fa2a9',
+			],
+			[
+				'name'  => esc_html__( 'Growth Green', 'cddc' ),
+				'slug'  => 'growth-green',
+				'color' => '#88b48e',
+			],
+			[
+				'name'  => esc_html__( 'Hope Green', 'cddc' ),
+				'slug'  => 'hope-green',
+				'color' => '#d8e9bb',
+			],
+		]
+	);
+}
+add_action( 'after_setup_theme', 'cdpc_add_custom_gutenberg_color_palette' );

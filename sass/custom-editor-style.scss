@@ -1,2 +1,54 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
 //@import "theme"; 
+
+$action-red:    #c42127;
+$night-blue:    #003149;
+$tomorrow-blue: #4fa2a9;
+$growth-green:  #88b48e;
+$hope-green:    #d8e9bb;
+
+.has-action-red-background-color {
+  background-color: $action-red;
+  &:hover {
+    background-color: darken($action-red, 10%);
+  }
+}
+
+.has-action-red-color {
+  color: $action-red !important;
+}
+
+.has-night-blue-background-color {
+  background-color: $night-blue;
+  &:hover {
+    background-color: darken($night-blue, 10%);
+  }
+}
+
+.has-night-blue-color {
+  color: $night-blue !important;
+}
+
+.has-tmr-blue-background-color {
+  background-color: $tomorrow-blue;
+}
+
+.has-tmr-blue-color {
+  color: $tomorrow-blue !important;
+}
+
+.has-growth-green-background-color {
+  background-color: $growth-green;
+}
+
+.has-growth-green-color {
+  color: $growth-green !important;
+}
+
+.has-hope-green-background-color {
+  background-color: $hope-green;
+}
+
+.has-hope-green-color {
+  color: $hope-green !important;
+}

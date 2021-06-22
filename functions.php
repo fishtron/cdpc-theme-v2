@@ -357,29 +357,34 @@ function cdpc_add_custom_gutenberg_color_palette() {
 		'editor-color-palette',
 		[
 			[
-				'name'  => esc_html__( 'Action Red', 'cddc' ),
-				'slug'  => 'action-red',
-				'color' => '#c42127',
+				'name'  => esc_html__( 'Dark Green', 'cddc' ),
+				'slug'  => 'dark-green',
+				'color' => '#225b54',
 			],
 			[
-				'name'  => esc_html__( 'Night Blue', 'cddc' ),
-				'slug'  => 'night-blue',
-				'color' => '#003149',
+				'name'  => esc_html__( 'Light Green', 'cddc' ),
+				'slug'  => 'light-green',
+				'color' => '#2fadaa',
 			],
 			[
-				'name'  => esc_html__( 'Tomorrow Blue', 'cddc' ),
-				'slug'  => 'tmr-blue',
-				'color' => '#4fa2a9',
+				'name'  => esc_html__( 'Black', 'cddc' ),
+				'slug'  => 'black',
+				'color' => '#212529',
 			],
 			[
-				'name'  => esc_html__( 'Growth Green', 'cddc' ),
-				'slug'  => 'growth-green',
-				'color' => '#88b48e',
+				'name'  => esc_html__( 'Soft Grey', 'cddc' ),
+				'slug'  => 'soft-grey',
+				'color' => '#727375',
 			],
 			[
-				'name'  => esc_html__( 'Hope Green', 'cddc' ),
-				'slug'  => 'hope-green',
-				'color' => '#d8e9bb',
+				'name'  => esc_html__( 'Mid-Neutral', 'cddc' ),
+				'slug'  => 'mid-neutral',
+				'color' => '#ccccbf',
+			],
+			[
+				'name'  => esc_html__( 'White', 'cddc' ),
+				'slug'  => 'white',
+				'color' => '#f2f0e7',
 			],
 		]
 	);

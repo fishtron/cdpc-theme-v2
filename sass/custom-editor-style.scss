@@ -1,54 +1,63 @@
 //Add your own editor styles here or comment out the next line if you want to pull in the whole Bootstrap stuff
 //@import "theme"; 
 
-$action-red:    #c42127;
-$night-blue:    #003149;
-$tomorrow-blue: #4fa2a9;
-$growth-green:  #88b48e;
-$hope-green:    #d8e9bb;
+$dark-green: #225b54;
+$light-green: #2fadaa;
+$black: #212529;
+$soft-grey: #727375;
+$mid-neutral: #ccccbf;
+$white: #f2f0e7;
 
-.has-action-red-background-color {
-  background-color: $action-red;
+.has-dark-green-background-color {
+  background-color: $dark-green;
   &:hover {
-    background-color: darken($action-red, 10%);
+    background-color: darken($dark-green, 10%);
   }
 }
 
-.has-action-red-color {
-  color: $action-red !important;
+.has-dark-green-color {
+  color: $dark-green !important;
 }
 
-.has-night-blue-background-color {
-  background-color: $night-blue;
+.has-light-green-background-color {
+  background-color: $light-green;
   &:hover {
-    background-color: darken($night-blue, 10%);
+    background-color: darken($light-green, 10%);
   }
 }
 
-.has-night-blue-color {
-  color: $night-blue !important;
+.has-light-green-color {
+  color: $light-green !important;
 }
 
-.has-tmr-blue-background-color {
-  background-color: $tomorrow-blue;
+.has-black-background-color {
+  background-color: $black;
 }
 
-.has-tmr-blue-color {
-  color: $tomorrow-blue !important;
+.has-black-color {
+  color: $black !important;
 }
 
-.has-growth-green-background-color {
-  background-color: $growth-green;
+.has-soft-grey-background-color {
+  background-color: $soft-grey;
 }
 
-.has-growth-green-color {
-  color: $growth-green !important;
+.has-soft-grey-color {
+  color: $soft-grey !important;
 }
 
-.has-hope-green-background-color {
-  background-color: $hope-green;
+.has-mid-neutral-background-color {
+  background-color: $mid-neutral;
 }
 
-.has-hope-green-color {
-  color: $hope-green !important;
+.has-mid-neutral-color {
+  color: $mid-neutral !important;
+}
+
+.has-white-background-color {
+  background-color: $white;
+}
+
+.has-white-color {
+  color: $white !important;
 }

@@ -423,50 +423,58 @@ figure.wp-block-embed.wp-has-aspect-ratio iframe {
   height: 100% !important;
 }
 
-.has-action-red-background-color {
-  background-color: $action-red;
+.has-dark-green-background-color {
+  background-color: $primary;
   &:hover {
-    background-color: darken($action-red, 10%);
+    background-color: darken($primary, 10%);
   }
 }
 
-.has-action-red-color {
-  color: $action-red !important;
+.has-dark-green-color {
+  color: $primary !important;
 }
 
-.has-night-blue-background-color {
-  background-color: $night-blue;
+.has-light-green-background-color {
+  background-color: $secondary;
   &:hover {
-    background-color: darken($night-blue, 10%);
+    background-color: darken($secondary, 10%);
   }
 }
 
-.has-night-blue-color {
-  color: $night-blue !important;
+.has-light-green-color {
+  color: $secondary !important;
 }
 
-.has-tmr-blue-background-color {
-  background-color: $tomorrow-blue;
+.has-black-background-color {
+  background-color: $black;
 }
 
-.has-tmr-blue-color {
-  color: $tomorrow-blue !important;
+.has-black-color {
+  color: $black !important;
 }
 
-.has-growth-green-background-color {
-  background-color: $growth-green;
+.has-soft-grey-background-color {
+  background-color: $soft-grey;
 }
 
-.has-growth-green-color {
-  color: $growth-green !important;
+.has-soft-grey-color {
+  color: $soft-grey !important;
 }
 
-.has-hope-green-background-color {
-  background-color: $hope-green;
+.has-mid-neutral-background-color {
+  background-color: $mid-neutral;
 }
 
-.has-hope-green-color {
-  color: $hope-green !important;
+.has-mid-neutral-color {
+  color: $mid-neutral !important;
+}
+
+.has-white-background-color {
+  background-color: $white;
+}
+
+.has-white-color {
+  color: $white !important;
 }
 
 /* Global Blocks */
